@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="demo.divyesh.booking.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabSelectedTextColor="#ffffff"
+            app:tabTextColor="#ffffff" />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.squareup.timessquare.CalendarPickerView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="#FFFFFF"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay" />
+
+        <!--<com.savvi.rangedatepicker.CalendarPickerView xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/calendar_view"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:clipToPadding="false"-->
+            <!--android:paddingBottom="16dp"-->
+            <!--android:paddingLeft="16dp"-->
+            <!--android:paddingRight="16dp"-->
+            <!--android:scrollbarStyle="outsideOverlay"-->
+            <!--android:visibility="gone"-->
+            <!--app:tsquare_headerTextColor="@color/colorPrimary" />-->
+
+        <com.andexert.calendarlistview.library.DayPickerView xmlns:calendar="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pickerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            calendar:colorPreviousDay="#cccccc"
+            calendar:colorSelectedDayBackground="@color/colorAccent"
+            calendar:enablePreviousDay="false" />
+
+        <CalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"></CalendarView>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
